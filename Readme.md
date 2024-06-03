@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Ксения Мешкова](https://up.htmlacademy.ru/adaptive-individual/1/user/2446305).
-* Наставник: [Виктория Никитина](https://up.htmlacademy.ru/adaptive-individual/1/user/2446305).
+* Наставник: [Виктория  Никитина](https://up.htmlacademy.ru/adaptive-individual/1/user/2446305).
 
 ---
 
