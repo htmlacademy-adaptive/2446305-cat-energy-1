@@ -1,12 +1,90 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <picture>
+        <img class="main-header__logo-img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33px" height="38px">
+      </picture>
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current">
+            <a class="main-nav__link" href="#">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <section class="welcome">
+      <h1 class="welcome__title">Функциональное питание для котов</h1>
+      <p class="welcome__text">Занялся собой? Займись котом!</p>
+      <a class="welcome__link" href="#">Подобрать программу</a>
+    </section>
+    <section class="programms">
+      <ul class="programms__list">
+        <li class="programms__item">
+          <h2 class="programms__title">Похудение</h2>
+          <p class="programms__description">Ваш кот весит больше собаки и почти утратил способность лазить
+            по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="programms__link" href="#">Каталог slim</a>
+
+        </li>
+        <li class="programms__list-item">
+          <h2 class="programms__list-item-title">Набор массы</h2>
+          <p class="programms__list-item-description">Заработать авторитет среди дворовых котов и даже собак? Серия
+            Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="programms__list-item-link" href="#">Каталог pro</a>
+        </li>
+      </ul>
+    </section>
+    <section class="how">
+      <h2 class="how__title">Как это работает</h2>
+      <ul class="how__list">
+        <li class="how__item how__item--leaf">
+          <p class="how__description">Функциональное питание содержит только полезные питательные
+            вещества.</p>
+            <img class="how__item-picture" src="./img/leaf.svg" width="60" height="60" alt="Лист">
+        </li>
+        <li class="work-programm__list-item">
+          <p class="work-programm__item-description">Выпускается в виде порошка, который нужно лишь залить кипятком и
+            готово.</p>
+          <img class="work-programm__item-picture" src="./img/powder.svg" width="60" height="60" alt="Порошок">
+        </li>
+        <li class="work-programm__list-item">
+          <p class="work-programm__item-description">Замените один-два приема обычной еды на наше функциональное
+            питание.</p>
+          <img class="work-programm__item-picture" src="./img/knife.svg" width="60" height="60" alt="Нож и вилка">
+        </li>
+        <li class="work-programm__list-item">
+          <p class="work-programm__item-description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p>
+          <img class="work-programm__item-picture" src="./img/watch.svg" width="60" height="60" alt="Часы">
+        </li>
+      </ul>
+    </section>
+
+    
+
+</body>
+
 </html>
