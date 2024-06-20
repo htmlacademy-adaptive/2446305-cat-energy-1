@@ -1,0 +1,95 @@
+.welcome {
+    min-height: 302px;
+    font-family: "Oswald Regular", "Arial", sans-serif;
+    color: #ffffff;
+    background-image: url("../img/green-cat.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #ffffff;
+    padding: 0 0 20px;
+    margin: 0;
+}
+
+.welcome__wrapper {
+    padding-bottom: 135px;
+    position: relative;
+    margin-bottom: 3px;
+
+    &::before {
+        content: "";
+        width: 280px;
+        height: 270px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("../img/cat-food.png") no-repeat 0 0;
+        z-index: 10;
+    }
+}
+
+.welcome__container {
+    padding-bottom: 161px;
+    background: #4f4e54 url("../img/background-cat.jpg") no-repeat top center;
+    background-size: auto 100%;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: url("../img/rectangle.svg") repeat 0 0;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.welcome__title {
+    padding: 0;
+    margin: 0 auto;
+    width: 250px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 23px;
+    padding-top: 26px;
+    position: relative;
+    z-index: 5;
+
+}
+
+.welcome__link {
+    margin: 0 20px;
+    padding: 11px 64px 9px 63px;
+    width: auto;
+    min-height: 40px;
+    text-decoration: none;
+    background-color: #68b738;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: center;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.welcome__text {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
