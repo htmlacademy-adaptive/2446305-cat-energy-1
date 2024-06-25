@@ -23,30 +23,28 @@
 	padding: 0;
 	list-style: none;
 	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	min-height: 60px;
 }
 
 .how__item--leaf {
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 60px 60px;
+	background-image: url("../img/leaf.svg");
 }
 
 .how__description {
-	margin: 0;
-	padding: 2px 0 4px;
+	margin: 0 5px 0 79px;
+	padding: 4px 0 0;
 	color: #444444;
-	font-family: "Lato";
+	font-family: @lato;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 18px;
 	margin-left: 79px;
-	width: 227px;
 }
 
-.how__item-picture {
-	top: 0;
+.how__item--powder {
+	background-image: url("../img/powder.svg");
 }
-
 
 .how__item-description {
 	margin: 0;
@@ -60,6 +58,14 @@
 	width: 227px;
 }
 
+.how__item--eat {
+	background-image: url("../img/knife.svg");
+}
+
+.how__item--time {
+	background-image: url("../img/watch.svg");
+}
+
 .how__list-item {
-list-style: none;
+	list-style: none;
 }

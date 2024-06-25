@@ -3,7 +3,7 @@
     padding: 28px 20px 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: space-between;
 }
 
 .address__invitation {
@@ -17,17 +17,28 @@
 }
 
 .address__site {
-	margin: 0;
-	padding: 0;
-	width: 140px;
-	font-family: @lato;
-	font-size: 14px;
-	line-height: 20px;
-font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+    font-family: @lato;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
 }
 
 .adress__map {
-	background-image: url("../../img/location.png");
-	background-repeat: no-repeat;
-	width: 100%;
+    width: 100%;
+}
+
+
+.address__location {
+
+}
+
+.address__location-img {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    object-fit: cover;
+    height: 362px;
 }

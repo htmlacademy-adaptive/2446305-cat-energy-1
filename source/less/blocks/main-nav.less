@@ -1,5 +1,6 @@
 .main-nav {
 	position: relative;
+	display: none;
 }
 
 .main-nav__toggle {
@@ -9,7 +10,26 @@
 	width: 24px;
 	height: 24px;
 	display: block;
-	background-image: url(../../img/menu.svg);
+	background-image: url("../img/menu.svg");
+	background-repeat: no-repeat;
+	background-color: #ffffff;
+	border: none;
+	cursor: pointer;
+	/*display: none;/*/
+}
+
+.nav--closed .main-nav__toggle {
+	display: block;
+}
+
+.nav--opened .main-nav__toggle {
+	display: block;
+	background-image: url("../img/cross.svg");
+	position: absolute;
+	right: 20px;
+	top: -45px;
+	width: 24px;
+	height: 24px;
 	background-repeat: no-repeat;
 	background-color: #ffffff;
 	border: none;
@@ -21,7 +41,20 @@
 	padding: 0;
 	list-style: none;
 	border-top: 1px solid black;
+	/*display: none;/*/
+}
+
+.nav--closed .main-nav__list {
 	display: none;
+}
+
+.nav--opened .main-nav__list {
+	display: block;
+	position: absolute;
+	width: 100%;
+	background-color: #ffffff;
+	top: 0;
+	left: 0;
 }
 
 .main-nav__link {

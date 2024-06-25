@@ -28,27 +28,32 @@
 }
 
 .programms__link {
-    font-weight: 400;
+    display: inline-block;
+    margin: 0 0 0 20px;
+    padding: 19px 45px 0 0;
     font-size: 16px;
     line-height: 16px;
+    font-weight: 400;
     text-transform: uppercase;
-    width: 135px;
     min-height: 24px;
     color: #000000;
     text-decoration: none;
-    display: block;
-    margin-left: 21px;
-    margin-right: 50px;
+    position: relative;
 }
 
-.programms__link::before {
+&::after {
     content: "";
+    width: 24px;
+    height: 12px;
     position: absolute;
-    width: 240px;
-    height: 1px;
-    background-color: #d9d9d9;
-    top: -21px;
-    left: 0;
+    left: calc(100% - 30px);
+    top: 21px;
+    background: url("../img/arrow-big.svg") no-repeat right 0 top 0;
+    transition: 0.5s width ease;
+}
+
+&:hover::after {
+    width: 32px;
 }
 
 .programms__item--slim {
@@ -75,21 +80,27 @@
     position: relative;
 }
 
+.programms__container::before {
+    content: "";
+    position: absolute;
+    width: 271px;
+    height: 1px;
+    background-color: #d9d9d9;
+    top: -21px;
+    left: 15px;
+}
+
 .programms__link--slim-arrow {
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
     background-position: 101px 1px;
 }
 
 .programms__item--back {
     background-image: url("../img/cat-back.svg");
     background-repeat: no-repeat;
-    background-position: 20px 21px;
+    background-position: 14px 23px;
     background-size: 67px 50px;
 }
 
 .programms__link--pro-arrow {
-    background-image: url(../img/arrow.svg);
-    background-repeat: no-repeat;
     background-position: 101px 1px;
 }
