@@ -30,7 +30,7 @@
 .programms__link {
     display: inline-block;
     margin: 0 0 0 20px;
-    padding: 19px 45px 0 0;
+    padding: 0 45px 0 0;
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
@@ -39,7 +39,6 @@
     color: #000000;
     text-decoration: none;
     position: relative;
-}
 
 &::after {
     content: "";
@@ -47,9 +46,10 @@
     height: 12px;
     position: absolute;
     left: calc(100% - 30px);
-    top: 21px;
+    top: 3px;
     background: url("../img/arrow-big.svg") no-repeat right 0 top 0;
     transition: 0.5s width ease;
+}
 }
 
 &:hover::after {
@@ -67,7 +67,7 @@
 .programms__description {
     font-family: "Lato", Arial, sans-serif;
     color: #444444;
-    margin: 0 27px 42px 20px;
+    margin: 0 27px 38px 20px;
     padding: 0;
     font-size: 14px;
     line-height: 18px;
@@ -83,10 +83,10 @@
 .programms__container::before {
     content: "";
     position: absolute;
-    width: 271px;
+    width: calc(100% - 40px);
     height: 1px;
     background-color: #d9d9d9;
-    top: -21px;
+    top: -15px;
     left: 15px;
 }
 
