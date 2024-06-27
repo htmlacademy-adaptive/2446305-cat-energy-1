@@ -3,10 +3,28 @@
     padding: 65px 0 0 0;
     background: url("../img/logo-cat.svg") no-repeat center 23px;
     z-index: 12;
+
+    @media (min-width: @tablet) {
+        padding: 0;
+        background-image: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        margin-right: 37px;
+        position: relative;
+        background: none;
+    }
 }
 
 .main-header__logo {
     position: absolute;
     top: 13px;
     left: 20px;
+
+    @media (min-width: @tablet) {
+        width: 174px;
+        position: absolute;
+        top: 24px;
+        left: 32px;
+    }
 }
