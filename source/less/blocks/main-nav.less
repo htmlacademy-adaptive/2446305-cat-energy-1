@@ -84,9 +84,18 @@
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 24px;
-		padding: 37px 0 22px;
-	}
+		padding: 38px 0 26px;
+		position: relative;
 
+		&::after {
+			position: relative;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			border-top: 2px solid #68b738;
+			width: 58px;
+		}
+	}
 }
 
 .main-nav__item {

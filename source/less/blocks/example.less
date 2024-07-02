@@ -2,6 +2,13 @@
     margin: 0;
     padding: 26px 0 40px 0px;
     background-color: #eaeaea;
+
+    @media (min-width: @tablet) {
+        padding: 46px 0 0 0;
+        border-top: 1px solid #f2f2f2;
+        background-color: #ffffff;
+    }
+
 }
 
 .example__title {
@@ -11,6 +18,15 @@
     font-size: 36px;
     line-height: 40px;
     font-weight: 400;
+
+    @media (min-width: @tablet) {
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 60px;
+        width: 325px;
+        margin: 72px 0 0 33px;
+
+    }
 }
 
 .example__text {
@@ -20,6 +36,24 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
+
+    @media (min-width: @tablet) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 62px 0 0 33px;
+        width: 720px;
+    }
+}
+
+.example__container {
+    @media (min-width: @tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 53px 0px 250px 30px;
+
+    }
 }
 
 .example__result {
@@ -27,6 +61,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     width: 280px;
+
+    @media (min-width: @tablet) {
+        width: 370px;
+    }
 }
 
 .example__cost {
@@ -39,11 +77,29 @@
     margin: 0 auto 18px;
     width: 188px;
     padding-top: 20px;
-}
+
+    @media (min-width: @tablet) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        margin: 0;
+        text-align: right;
+        padding: 7px 33px 8px 3px;
+      }
+
+    }
 
 .example__slider {
     padding: 0;
     margin: 0 auto;
     width: 280px;
     height: 256px;
+
+    @media (min-width: @tablet) {
+     background-color: #eaeaea;
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     min-height: 463px;
+    }
 }

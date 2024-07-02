@@ -1,12 +1,21 @@
 .programms {
     margin: 0;
     padding: 0;
+
+    @media (min-width: @tablet) {
+      padding: 0;
+      margin: 0;
+   }
 }
 
 .programms__list {
     padding: 0 20px;
     margin: 0;
 
+    @media (min-width: @tablet) {
+     padding: 0 30px;
+
+  }
 }
 
 .programms__item {
@@ -15,7 +24,12 @@
     margin: 0;
     padding: 31px 0 14px 0;
     margin-bottom: 19px;
-}
+
+    @media (min-width: @tablet) {
+      margin-bottom: 30px;
+      padding: 0 0px 65px 0;
+   }
+ }
 
 .programms__title {
     margin: 0 50px 29px 90px;
@@ -25,7 +39,15 @@
     font-weight: 400;
     text-transform: uppercase;
     color: black;
-}
+
+    @media (min-width: @tablet) {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 36px;
+        padding: 77px 0 23px 0;
+        margin: 0 0 0 55px;
+      }
+    }
 
 .programms__link {
     display: inline-block;
@@ -40,16 +62,30 @@
     text-decoration: none;
     position: relative;
 
-&::after {
-    content: "";
-    width: 24px;
-    height: 12px;
-    position: absolute;
-    left: calc(100% - 30px);
-    top: 3px;
-    background: url("../img/arrow-big.svg") no-repeat right 0 top 0;
-    transition: 0.5s width ease;
-}
+    &::after {
+        content: "";
+        width: 24px;
+        height: 12px;
+        position: absolute;
+        left: calc(100% - 30px);
+        top: 3px;
+        background: url("../img/arrow-big.svg") no-repeat right 0 top 0;
+        transition: 0.5s width ease;
+
+        
+    @media (min-width: @tablet) {
+      top: 10px;
+   }
+    }
+
+    @media (min-width: @tablet) {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 29.64px;
+      margin: 0 0 0 55px;
+      top: 10px;
+      padding: 0 57px 0 0;
+   }
 }
 
 &:hover::after {
@@ -62,6 +98,12 @@
     background-position: 20px 21px;
     background-size: 50px 53px;
 
+    @media (min-width: @tablet) {
+        background-image: url("../img/cat-slim-tablet.svg");
+        background-size: 225px 212px;
+        background-position: 435px 81px;
+    }
+
 }
 
 .programms__description {
@@ -73,6 +115,15 @@
     line-height: 18px;
     font-weight: 400;
     max-width: 500px;
+
+    @media (min-width: @tablet) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0 0px 45px 56px;
+        width: 340px;
+    }
+
 }
 
 .programms__container {
@@ -88,6 +139,11 @@
     background-color: #d9d9d9;
     top: -15px;
     left: 15px;
+
+    @media (min-width: @tablet) {
+    background-color: #f2f2f2;
+    width: 18px;
+  }
 }
 
 .programms__link--slim-arrow {
@@ -99,7 +155,13 @@
     background-repeat: no-repeat;
     background-position: 14px 23px;
     background-size: 67px 50px;
-}
+
+    @media (min-width: @tablet) {
+        background-image: url("../img/cat-back-tablet.svg");
+        background-size: 268px 221px;
+        background-position: 414px 81px;
+    }
+    }
 
 .programms__link--pro-arrow {
     background-position: 101px 1px;

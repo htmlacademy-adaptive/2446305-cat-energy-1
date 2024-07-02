@@ -4,6 +4,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (min-width: @tablet) {
+        padding: 61px 69px 62px;
+    }
 }
 
 .address__invitation {
@@ -14,6 +18,13 @@
     font-weight: 400;
     text-transform: uppercase;
     width: 140px;
+
+    @media (min-width: @tablet) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        width: 163px;
+    }
 }
 
 .address__site {
@@ -24,6 +35,12 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
+
+    @media (min-width: @tablet) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
 }
 
 .adress__map {
@@ -32,9 +49,7 @@
 }
 
 
-.address__location {
-
-}
+.address__location {}
 
 .address__location-img {
     position: absolute;
