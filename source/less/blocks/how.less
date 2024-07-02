@@ -1,65 +1,114 @@
 .how {
-	margin: 0;
-	padding: 0 20px 29px;
+  margin: 0;
+  padding: 0 20px 29px;
 }
 
 .how__title {
-	margin: 0 0;
-	padding: 0;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 40px;
-	width: 230px;
-	margin-bottom: 40px;
+  margin: 0 0;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  width: 230px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    width: 375px;
+    padding: 17px 0 0px 13px;
+  }
 }
 
 .how__list {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 280px 280px;
+    gap: 103px;
+  }
+
 }
 
 .how__item {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	margin-bottom: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  min-height: 60px;
+
+  @media (min-width: @tablet) {
+    min-height: 80px;
+    margin: 31px 0 0 13px;
+  }
 }
 
 .how__item--leaf {
-	background-repeat: no-repeat;
-	background-position: 0 0;
-	background-size: 60px 60px;
+  background-image: url("../img/leaf.svg");
+
+  @media (min-width: @tablet) {
+    background-image: url("../img/leaf-tablet.svg");
+  }
 }
 
 .how__description {
-	margin: 0;
-	padding: 2px 0 4px;
-	color: #444444;
-	font-family: "Lato";
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
-	margin-left: 79px;
-	width: 227px;
+  margin: 0 5px 0 79px;
+  padding: 4px 0 0;
+  color: #444444;
+  font-family: @lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-left: 79px;
+
+  @media (min-width: @tablet) {
+    padding: 111px 0 0 0;
+    margin: 0 0 0 2px;
+    width: 242px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }
 
-.how__item-picture {
-	top: 0;
-}
+.how__item--powder {
+  background-image: url("../img/powder.svg");
 
+  @media (min-width: @tablet) {
+    background-image: url("../img/powder-tablet.svg");
+  }
+}
 
 .how__item-description {
-	margin: 0;
-	padding: 2px 0 4px;
-	color: #444444;
-	font-family: "Lato";
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 18px;
-	margin-left: 79px;
-	width: 227px;
+  margin: 0;
+  padding: 2px 0 4px;
+  color: #444444;
+  font-family: "Lato";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-left: 79px;
+  width: 227px;
+}
+
+.how__item--eat {
+  background-image: url("../img/knife.svg");
+
+  @media (min-width: @tablet) {
+    background-image: url("../img/knife-tablet.svg");
+  }
+}
+
+.how__item--time {
+  background-image: url("../img/watch-tablet.svg");
 }
 
 .how__list-item {
-list-style: none;
+  list-style: none;
 }

@@ -3,7 +3,11 @@
     padding: 28px 20px 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: space-between;
+
+    @media (min-width: @tablet) {
+        padding: 61px 69px 62px;
+    }
 }
 
 .address__invitation {
@@ -14,20 +18,45 @@
     font-weight: 400;
     text-transform: uppercase;
     width: 140px;
+
+    @media (min-width: @tablet) {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        width: 163px;
+    }
 }
 
 .address__site {
-	margin: 0;
-	padding: 0;
-	width: 140px;
-	font-family: @lato;
-	font-size: 14px;
-	line-height: 20px;
-font-weight: 400;
+    margin: 0;
+    padding: 0;
+    width: 140px;
+    font-family: @lato;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+
+    @media (min-width: @tablet) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
 }
 
 .adress__map {
-	background-image: url("../../img/location.png");
-	background-repeat: no-repeat;
-	width: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+.address__location {}
+
+.address__location-img {
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    object-fit: cover;
+    height: 362px;
+    top: 0;
+    left: 0;
 }
