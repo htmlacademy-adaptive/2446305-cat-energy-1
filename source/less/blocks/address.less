@@ -1,0 +1,86 @@
+.address {
+  margin: 0 auto;
+  padding: 28px 20px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet) {
+    padding: 61px 22px 39px 73px;
+  }
+}
+
+.address__invitation {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 140px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    width: 163px;
+  }
+}
+
+.address__site {
+  margin: 0;
+  padding: 0;
+  width: 140px;
+  font-family: @lato;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.address__street {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    
+  }
+}
+
+.address__city {
+  margin: 0;
+  padding: 0;
+}
+
+.address-map {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  position: relative;
+  height: 402px;
+
+  @media (min-width: @tablet) {
+   
+  }
+}
+
+.address-map__iframe {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.address-map__img {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}

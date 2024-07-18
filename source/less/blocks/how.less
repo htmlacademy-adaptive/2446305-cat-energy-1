@@ -1,6 +1,11 @@
 .how {
   margin: 0;
-  padding: 0 20px 29px;
+  padding: 1px 20px 30px 20px;
+
+  @media (min-width: @tablet){
+  margin: 0;
+  padding: 0 20px 102px;
+}
 }
 
 .how__title {
@@ -42,6 +47,7 @@
   margin-bottom: 20px;
   background-repeat: no-repeat;
   min-height: 60px;
+  position: relative;
 
   @media (min-width: @tablet) {
     min-height: 80px;
@@ -50,10 +56,31 @@
 }
 
 .how__item--leaf {
-  background-image: url("../img/leaf.svg");
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: url("../img/leaf.svg") center #68b738 no-repeat;
+
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/leaf-tablet.svg");
+    &::after {
+      content: "1";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      bottom: -122px;
+      left: 119px;
+      z-index: -1;
+    }
   }
 }
 
@@ -74,14 +101,36 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    position: relative;
   }
 }
 
 .how__item--powder {
-  background-image: url("../img/powder.svg");
+
+  &::before {
+    content: "";
+    background: url("../img/powder.svg") center #68b738 no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/powder-tablet.svg");
+    &::after {
+      content: "2";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      bottom: -124px;
+      left: 112px;
+      z-index: -1;
+    }
   }
 }
 
@@ -98,15 +147,60 @@
 }
 
 .how__item--eat {
-  background-image: url("../img/knife.svg");
+
+  &::before {
+    content: "";
+    background: url("../img/knife.svg") center #68b738 no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/knife-tablet.svg");
+    &::after {
+      content: "3";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      bottom: -124px;
+      left: 112px;
+      z-index: -1;
+    }
   }
 }
 
 .how__item--time {
-  background-image: url("../img/watch-tablet.svg");
+
+  &::before {
+    content: "";
+    background: url("../img/watch.svg") center #68b738 no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      content: "4";
+      position: absolute;
+      color: #f2f2f2;
+      font-size: 280px;
+      bottom: -124px;
+      left: 112px;
+      z-index: -1;
+    }
+  }
 }
 
 .how__list-item {

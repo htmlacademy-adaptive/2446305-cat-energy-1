@@ -2,6 +2,11 @@
     margin: 0;
     padding: 20px 0 40px;
     background-color: #f2f2f2;
+
+    @media (min-width: @tablet) {
+        padding: 0;
+
+    }
 }
 
 .logo-academy__link {
@@ -14,6 +19,10 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media (min-width: @tablet) {
+       width: 162px;
+    }
 }
 
 .logo-academy__text {
@@ -24,4 +33,10 @@
     line-height: 20px;
     width: 113px;
     margin-top: 7px;
+
+    @media (min-width: @tablet) {
+        border-bottom: none;
+        padding: 0;
+        margin: 0;
+    }
 }
