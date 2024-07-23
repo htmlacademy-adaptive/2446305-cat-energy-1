@@ -9,7 +9,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import del from 'del';
+import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 
@@ -99,8 +99,8 @@ const copy = (done) => {
 
 // Clean
 
-const clean = () => {
-  return del('build');
+const clean = async () => {
+  await deleteAsync('build');
 };
 
 // Server
@@ -166,4 +166,3 @@ export default gulp.series(
     server,
     watcher
   ));
-
