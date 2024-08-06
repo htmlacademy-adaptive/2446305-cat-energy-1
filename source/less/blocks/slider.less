@@ -1,46 +1,118 @@
 .slider {
-    width: 280px;
-    height: 256px;
-    margin: 0 auto;
-    position: relative;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .slider__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    width: 280px;
-    height: 256px;
-    position: absolute;
-    top: 0;
-    left: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 280px;
+  height: 256px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @tablet) {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .slider__screen {
-    width: 280px;
-    height: 256px;
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #eaeaea;
-    overflow: hidden;
+  width: 280px;
+  height: 256px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eaeaea;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    width: 560px;
+    height: 512px;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: blueviolet;
+      z-index: 1;
+    }
+  }
 }
 
 .slider__screen--before {
-    width: 50%;
-    z-index: 5;
-    transition: width 1s ease;
+  width: 50%;
+  z-index: 5;
+  transition: width 1s ease;
 }
 
 .slider--before .slider__screen--before {
-    width: 100%;
+  width: 100%;
 }
 
 .slider--after .slider__screen--before {
-    width: 0;
+  width: 0;
 }
 
-.slider__image {}
+.slider__image {
+  position: relative;
+  z-index: 5;
+}
 
-.slider__handle {}
+.slider__handle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border: 2px solid #666666;
+  transition: left 1s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #666666;
+    width: 4px;
+    height: 256px;
+    top: -109px;
+    left: 17px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 7px;
+    height: 37px;
+    bottom: 0px;
+    left: 15px;
+    border: none;
+  }
+
+}
+
+.slider--before .slider__handle {
+  left: 100%;
+}
+
+.slider--after .slider__handle {
+  left: 0;
+}

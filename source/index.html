@@ -16,8 +16,8 @@
       <a class="main-header__logo logo-main">
         <picture>
           <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)" width="202px" hieght="59px">
-          <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" width="174px" hieght="50px"><img
-            class="logo__img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
+          <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" width="174px" hieght="50px">
+          <img class="logo__img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
         </picture>
       </a>
       <nav class="main-nav">
@@ -42,13 +42,15 @@
   </header>
   <main class="main-container">
     <section class="welcome">
-      <div class="welcome__wrapper">
-        <div class="welcome__container">
-          <h1 class="welcome__title">Функциональное питание для котов</h1>
-          <p class="welcome__text">Занялся собой? Займись котом!</p>
+      <div class="welcome__block">
+        <div class="welcome__wrapper">
+          <div class="welcome__container">
+            <h1 class="welcome__title">Функциональное питание для котов</h1>
+            <p class="welcome__text">Занялся собой? Займись котом!</p>
+          </div>
         </div>
+        <a class="welcome__link" href="#">Подобрать программу</a>
       </div>
-      <a class="welcome__link" href="#">Подобрать программу</a>
     </section>
     <section class="programms">
       <ul class="programms__list">
@@ -88,45 +90,55 @@
           <p class="how__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="how__item how__item--time">
-          <p class="how__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="how__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</p>
         </li>
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
-        в день.
-      </p>
-      <div class="example__container">
-        <div class="example__result result">
-          <dl class="result__list">
-            <dt class="result__term">5 кг</dt>
-            <dd class="result__description">cнижение веса</dd>
-          </dl>
-          <dl class="result__list">
-            <dt class="result__term">60 дней</dt>
-            <dd class="result__description">затрачено времени</dd>
-          </dl>
+      <div class="example__block">
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+          часов
+          в день.
+        </p>
+        <div class="example__container">
+          <div class="example__result result">
+            <dl class="result__list">
+              <dt class="result__term">5 кг</dt>
+              <dd class="result__description">cнижение веса</dd>
+            </dl>
+            <dl class="result__list">
+              <dt class="result__term">60 дней</dt>
+              <dd class="result__description">затрачено времени</dd>
+            </dl>
+          </div>
+          <p class="example__cost">Затраты на питание: 15 000 РУБ.</p>
         </div>
-        <p class="example__cost">Затраты на питание: 15 000 РУБ.</p>
-      </div>
-      <div class="example__slider slider slider--after">
-        <ul class="slider__list">
-          <li class="slider__screen slider__screen--before">
-            <picture>
-              <img src="./img/before.png" alt="Фото кота до" class="slider__image">
-            </picture>
-          </li>
-          <li class="slider__screen">
-            <picture>
-              <img src="./img/after.png" alt="Фото кота после" class="slider__image">
-            </picture>
-          </li>
-        </ul>
-        <button class="slider__handle">
-          <span class="visually-hidden">Показать состояния пациента до и после</span>
-        </button>
+        <div class="example__slider slider">
+          <ul class="slider__list">
+            <li class="slider__screen slider__screen--before">
+              <picture>
+                <source media="(min-width: 768px)" srset="./img/before-t.png 1x, ./img/before-t@2x.png 2x">
+                <img src="./img/before.png" alt="Фото кота до" class="slider__image">
+              </picture>
+            </li>
+            <li class="slider__screen">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./img/after-t.png 1x, ./img/after-t@2x.png 2x">
+                <img src="./img/after.png" srcset="./img/after@2x.png" alt="Фото кота после" class="slider__image">
+              </picture>
+            </li>
+          </ul>
+          <button class="slider__handle" type="button">
+            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 0L0 9L8 18V0Z" fill="#666666" />
+              <path d="M24 9L16 0V18L24 9Z" fill="#666666" />
+            </svg>
+
+            <span class="visually-hidden">Показать состояния пациента до и после</span>
+          </button>
+        </div>
       </div>
     </section>
   </main>

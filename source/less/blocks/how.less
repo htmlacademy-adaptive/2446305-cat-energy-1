@@ -21,7 +21,7 @@
   font-weight: 400;
   line-height: 40px;
   width: 230px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @media (min-width: @tablet) {
     font-size: 60px;
@@ -32,7 +32,8 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 19px 14px 0 11px;
+    padding: 17px 0 0 0;
+    width: 600px;
   }
 }
 
@@ -51,7 +52,7 @@
   @media (min-width: @desktop) {
     display: flex;
     flex-wrap: wrap;
-    gap: 67px;
+    gap: 82px;
   }
 }
 
@@ -64,21 +65,12 @@
   min-height: 60px;
   position: relative;
 
-  @media (min-width: @tablet) {
-    min-height: 80px;
-    margin: 31px 0 0 13px;
-  }
-}
-
-.how__item--leaf {
-
   &::before {
     content: "";
     width: 60px;
     height: 60px;
     position: absolute;
-    background: url("../img/leaf.svg") center #68b738 no-repeat;
-
+    background: center #68b738 no-repeat;
 
     @media (min-width: @tablet) {
       width: 80px;
@@ -86,15 +78,43 @@
     }
   }
 
+  &::after {
+    position: absolute;
+    color: #f2f2f2;
+    font-size: 280px;
+    bottom: -125px;
+    left: 116px;
+    z-index: -1;
+
+    @media (min-width: @desktop) {
+      bottom: -76px;
+      left: 118px;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    min-height: 80px;
+    margin: 31px 0 0 13px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 35px 0 0;
+    bottom: 2px;
+    left: 0px;
+  }
+}
+
+.how__item--leaf {
+
+  &::before {
+    background-image: url("../img/leaf.svg");
+
+    @media (min-width: @tablet) {}
+  }
+
   @media (min-width: @tablet) {
     &::after {
       content: "1";
-      position: absolute;
-      color: #f2f2f2;
-      font-size: 280px;
-      bottom: -122px;
-      left: 119px;
-      z-index: -1;
     }
   }
 }
@@ -120,36 +140,21 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 111px 0 0 0;
+    padding: 111px 0 52px;
     margin: 0 0 0 1px;
+    min-height: 72px;
   }
 }
 
 .how__item--powder {
 
   &::before {
-    content: "";
-    background: url("../img/powder.svg") center #68b738 no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-
-
-    @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
-    }
+    background-image: url("../img/powder.svg");
   }
 
   @media (min-width: @tablet) {
     &::after {
       content: "2";
-      position: absolute;
-      color: #f2f2f2;
-      font-size: 280px;
-      bottom: -124px;
-      left: 112px;
-      z-index: -1;
     }
   }
 }
@@ -169,27 +174,12 @@
 .how__item--eat {
 
   &::before {
-    content: "";
-    background: url("../img/knife.svg") center #68b738 no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-
-    @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
-    }
+    background-image: url("../img/knife.svg");
   }
 
   @media (min-width: @tablet) {
     &::after {
       content: "3";
-      position: absolute;
-      color: #f2f2f2;
-      font-size: 280px;
-      bottom: -124px;
-      left: 112px;
-      z-index: -1;
     }
   }
 }
@@ -197,28 +187,12 @@
 .how__item--time {
 
   &::before {
-    content: "";
-    background: url("../img/watch.svg") center #68b738 no-repeat;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-
-
-    @media (min-width: @tablet) {
-      width: 80px;
-      height: 80px;
-    }
+    background-image: url("../img/watch.svg");
   }
 
   @media (min-width: @tablet) {
     &::after {
       content: "4";
-      position: absolute;
-      color: #f2f2f2;
-      font-size: 280px;
-      bottom: -124px;
-      left: 112px;
-      z-index: -1;
     }
   }
 }

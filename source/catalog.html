@@ -42,49 +42,57 @@
     <h1 class="inner-title page-form__title">Подбор программы</h1>
     <p class="inner-text page-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form action="" class="form">
-      <fieldset class="form__group name-group">
-        <legend class="form__title visually-hidden">Описание пациента</legend>
-        <ul class="form__list name-group__list">
-          <li class="name-group__item text-input">
-            <label for="name" class="text-input__label">ИМЯ:*</label>
-            <input type="text" id="name" class="text-input__input" value="барсик">
-          </li>
-          <li class="name-group__item text-input">
-            <label for="weight" class="text-input__label">Вес(кг):*</label>
-            <input type="text" id="weight" class="text-input__input" value="7">
-          </li>
-          <li class="name-group__item text-input">
-            <label for="age" class="text-input__label">Возраст (лет):</label>
-            <input type="text" id="age" class="text-input__input" value="7">
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="form__group type-group">
-        <legend class="form__title visually-hidden">Цель программы</legend>
-        <ul class="form__list type-group__list">
-          <li class="type-group__item radio-input">
-            <input class="radio-input__input visually-hidden" type="radio" id="slim" name="aim" value="slim"
-              checked="checked">
-            <label class="radio-input__label" for="slim">похудение</label>
-          </li>
-          <li class="type-group__item radio-input">
-            <input class="radio-input__input visually-hidden" type="radio" id="mass" name="aim" value="mass">
-            <label class="radio-input__label" for="mass">Набор массы</label>
-          </li>
-          <li class="type-group__item radio-input">
-            <input class="radio-input__input visually-hidden" type="radio" id="advice" name="aim" value="advice">
-            <label class="radio-input__label" for="advice">Не знаю (Нужен ваш совет)</label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="form__wrapper">
+        <fieldset class="form__group name-group">
+          <legend class="form__title visually-hidden">Описание пациента</legend>
+          <ul class="form__list name-group__list">
+            <li class="name-group__item text-input">
+              <label for="name" class="text-input__label">ИМЯ:*</label>
+              <input type="text" id="name" class="text-input__input" value="барсик">
+            </li>
+            <li class="name-group__item text-input">
+              <label for="weight" class="text-input__label">Вес(кг):*</label>
+              <input type="text" id="weight" class="text-input__input" value="7">
+            </li>
+            <li class="name-group__item text-input">
+              <label for="age" class="text-input__label">Возраст (лет):</label>
+              <input type="text" id="age" class="text-input__input" value="7">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__group type-group">
+          <legend class="form__title visually-hidden">Цель программы</legend>
+          <ul class="form__list type-group__list">
+            <li class="type-group__item radio-input">
+              <input class="radio-input__input visually-hidden" type="radio" id="slim" name="aim" value="slim"
+                checked="checked">
+              <label class="radio-input__label" for="slim">похудение</label>
+            </li>
+            <li class="type-group__item radio-input">
+              <input class="radio-input__input visually-hidden" type="radio" id="mass" name="aim" value="mass">
+              <label class="radio-input__label" for="mass">Набор массы</label>
+            </li>
+            <li class="type-group__item radio-input">
+              <input class="radio-input__input visually-hidden" type="radio" id="advice" name="aim" value="advice">
+              <label class="radio-input__label" for="advice">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="form__group contact-group">
-        <legend class="form__title contact-group__title">Контактные данные (владельца кота)</legend>
+        <legend class="form__title special-title">
+          <span class="special-title__container">
+            <span class="form__title--comment special-title__text">Контактные данные (владельца кота)
+            </span>
+          </span>
+
+        </legend>
         <ul class="form__list contact-group__list">
           <li class="contact-group__item text-input">
             <label for="email" class="text-input__label">E-mail:*</label>
             <input type="text" id="email" class="text-input__input text-input__input--email" name="email"
               value="kuklachev@gmail.com">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="contact-group__img"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z"
                 stroke="black" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
