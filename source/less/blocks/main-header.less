@@ -14,6 +14,12 @@
         position: relative;
         background: none;
     }
+
+    @media (min-width: @desktop) {
+        padding-bottom: 21px;
+        margin: 0;
+        padding-top: 55px;
+    }
 }
 
 .main-header__logo {
@@ -26,5 +32,21 @@
         position: absolute;
         top: 25px;
         left: 32px;
+    }
+
+    @media (min-width: @desktop) {
+     top: 0;
+     left: 0;
+    }
+}
+
+.main-header-container {
+    padding: 0;
+
+    @media (min-width: @desktop) {
+        margin: 0 auto;
+        width: 1220px;
+        position: relative;
+        z-index: 25;
     }
 }
