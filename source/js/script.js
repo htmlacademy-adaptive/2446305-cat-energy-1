@@ -15,11 +15,11 @@ if (sliderHandle) {
     let flag = false;
     sliderHandle.addEventListener('click', () => {
         if (!flag) {
-            slider.classList.add('.slider--after');
+            slider.classList.add('slider--after');
             flag = true;
         } else {
-            slider.classList.toggle('.slider--after');
-            slider.classList.toggle('.slider--before');
+            slider.classList.toggle('slider--after');
+            slider.classList.toggle('slider--before');
         }
 
     })
