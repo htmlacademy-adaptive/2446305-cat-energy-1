@@ -5,9 +5,18 @@
 
 .name-group__list {
     margin: 0 21px;
+
+    @media (min-width: @desktop) {
+        margin: 0 auto;
+        width: 1220px;
+    }
 }
 
 .name-group__item:not(:last-child) {
     margin-bottom: 14px;
+
+    @media (min-width: @desktop) {
+        margin: 0;
+    }
 }
 
