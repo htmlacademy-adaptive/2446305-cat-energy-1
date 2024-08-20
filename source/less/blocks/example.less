@@ -80,7 +80,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        margin: 60px 0 0 33px;
+        margin: 7px 11px 54px 32px;
         width: 720px;
     }
 
@@ -93,10 +93,10 @@
 .example__container {
 
     @media (min-width: @tablet) {
-        display: flex;
+        display: block;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 55px 0px 250px 30px;
+        padding: 55px 0 100px 0;
     }
 
     @media (min-width: @desktop) {
@@ -111,15 +111,30 @@
 }
 
 .example__result {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     width: 280px;
 
     @media (min-width: @tablet) {
-        width: 370px;
+        width: 744px;
     }
 }
+
+.example__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 367px;
+    flex-wrap: wrap;
+    padding-left: 32px;
+    }
+
+    @media (min-width: @desktop) {
+     display: block;
+    }
+}
+
 
 .example__cost {
     font-weight: 400;
@@ -138,24 +153,42 @@
         line-height: 30px;
         margin: 0;
         text-align: right;
-        padding: 7px 33px 8px 3px;
+        padding: 7px 3px 8px 3px;
     }
-
 }
+
+.example__slider-container {
+
+
+    /*@media (min-width: @tablet) {
+     background-color: #eaeaea;
+     position: relative;
+     padding-bottom: 102px;
+
+     &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+       background-color: #ffffff;
+        width: 100%;
+        height: 151px;
+      }/*/
+
+      @media (min-width: @desktop) {
+       padding: 0;
+       background-color: #ffffff;
+    }
+    }
 
 .example__slider {
     padding: 0;
     margin: 0 auto;
-    width: 280px;
 
     @media (min-width: @tablet) {
-        background-color: #eaeaea;
-        margin: 0;
+        margin: 98px 0 0 87px;
         padding: 0;
-        width: 100%;
-        min-height: 463px;
     }
-
 
     @media (min-width: @desktop) {
         position: absolute;
