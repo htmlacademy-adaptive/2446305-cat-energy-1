@@ -2,6 +2,10 @@
   display: flex;
   gap: 14px;
   position: relative;
+
+  @media (min-width: @tablet) {
+  gap: 13px;
+}
 }
 
 .text-input__label {
@@ -12,6 +16,12 @@
   display: inline-block;
   padding-top: 13px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 15px;
+}
 }
 
 .text-input__input {
@@ -25,4 +35,14 @@
   padding: 0 14px;
   text-transform: uppercase;
 
-}
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 22px;
+    height: 50px;
+    padding: 0 19px;
+  }
+
+    @media (min-width: @desktop) {
+        width: 401px;
+    }
+  }

@@ -26,13 +26,13 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--current">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -56,7 +56,7 @@
               <label for="weight" class="text-input__label">Вес(кг):*</label>
               <input type="text" id="weight" class="text-input__input" value="7">
             </li>
-            <li class="name-group__item">
+            <li class="name-group__item text-input">
               <label for="age" class="text-input__label">Возраст (лет):</label>
               <input type="text" id="age" class="text-input__input" value="7">
             </li>
@@ -94,7 +94,8 @@
             <label for="email" class="text-input__label">E-mail:*</label>
             <input type="text" id="email" class="text-input__input text-input__input--email" name="email"
               value="kuklachev@gmail.com">
-            <svg class="contact-group__img"  width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="contact-group__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M1.50034 8.5V16.5H18.5041V8.5M1.50034 3.5H18.5041V5.5L10.0022 11.5L1.50034 5.5V3.5Z"
                 stroke="black" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
@@ -102,7 +103,8 @@
           <li class="contact-group__item text-input">
             <label for="phone" class="text-input__label">Телефон:*</label>
             <input type="text" id="phone" class="text-input__input" value="8 (960) 900-60-90">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="contact-group__img" width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7.00224 8H15.5041M15.5041 8L13.0036 5.5M15.5041 8L13.0036 10.5M5.50191 0.5V5.5H2.50124V10.5H5.50191V15.5H3.00135C1.50102 15.5 0.500793 14.5 0.500793 13V3C0.500793 1.5 1.50102 0.5 3.00135 0.5H5.50191Z"
                 stroke="black" stroke-linecap="round" stroke-linejoin="round" />
@@ -110,42 +112,59 @@
           </li>
         </ul>
       </fieldset>
+
       <fieldset class="form__group comment-group">
-        <legend class="form__title comment-group__title">Комментарий</legend>
-        <textarea style="overflow: auto" class="comment-group__input"
-          placeholder="Расскажите обо всех повадках кота"></textarea>
+        <legend class="form__title special-title">
+          <span class="special-title__container">
+            <span class="special-title__text">Комментарий</span>
+          </span>
+        </legend>
+        <div class="comment-group__block">
+          <textarea style="overflow: auto" class="comment-group__input"
+            placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
       </fieldset>
+
       <fieldset class="form__group addition-group">
-        <legend class="form__title addition-group__title">Дополнительно</legend>
+        <legend class="form__title special-title">
+          <span class="special-title__container">
+            <span class="special-title__text">Дополнительно</span>
+          </span>
+        </legend>
         <ul class="form__list addition-group__list">
-          <li class="addition-group__item text-input">
-            <input type="checkbox" id="sweetener" class="checkbox-input" name="сахарозаменитель" checked="checked">
-            <label for="sweetener" class="checkbox-label">сахарозаменитель</label>
+          <li class="addition-group__item checkbox-input">
+            <input type="checkbox" id="sweetener" class="checkbox-input__input visually-hidden" name="сахарозаменитель" checked="checked">
+            <label for="sweetener" class="checkbox-input__label">сахарозаменитель</label>
           </li>
-          <li class="addition-group__item text-input">
-            <input type="checkbox" id="water" class="checkbox-input" name="питьевая вода">
-            <label for="water" class="checkbox-label">питьевая вода</label>
+          <li class="addition-group__item checkbox-input">
+            <input type="checkbox" id="water" class="checkbox-input__input visually-hidden" name="питьевая вода">
+            <label for="water" class="checkbox-input__label">питьевая вода</label>
           </li>
-          <li class="addition-group__item text-input">
-            <input type="checkbox" id="milk" class="checkbox-input" name="молоко">
-            <label for="milk" class="checkbox-label">молоко</label>
+          <li class="addition-group__item checkbox-input">
+            <input type="checkbox" id="milk" class="checkbox-input__input visually-hidden" name="молоко">
+            <label for="milk" class="checkbox-input__label">молоко</label>
           </li>
-          <li class="addition-group__item text-input">
-            <input type="checkbox" id="vitamins" class="checkbox-input" name="витамины">
-            <label for="vitamins" class="checkbox-label">витамины</label>
+          <li class="addition-group__item checkbox-input">
+            <input type="checkbox" id="vitamins" class="checkbox-input__input visually-hidden" name="витамины">
+            <label for="vitamins" class="checkbox-input__label">витамины</label>
           </li>
         </ul>
       </fieldset>
-      <fieldset class="form__group">
-        <legend class="form__title">
-        </legend>
+      <fieldset class="form__group send-group">
+        <legend class="form__title visually-hidden">Отправить заявку</legend>
+        <div class="form__block">
+          <div class="send-group__wrapper">
+            <button class="send-group__button button-inner" type="submit">отправить заявку</button>
+            <span class="send-group__text">* — Обязательные поля</span>
+          </div>
+        </div>
       </fieldset>
     </form>
   </main>
   <footer class="footer">
     <section class="footer__contacts">
       <h2 class="visually-hidden">Контактная информация</h2>
-      <div class="footer__address address">
+      <div class="footer__address address address--form">
         <p class="address__invitation">приглашаем<br>к сотрудничеству дилеров!</p>
         <p class="address__site">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
