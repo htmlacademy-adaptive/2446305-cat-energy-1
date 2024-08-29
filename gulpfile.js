@@ -1,51 +1,171 @@
-{
-  "name": "cat-energy-1",
-  "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
-  "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
-    "autoprefixer": "10.4.0",
-    "browser-sync": "2.27.7",
-    "del": "6.0.0",
-    "gulp": "4.0.2",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-less": "5.0.0",
-    "gulp-libsquoosh": "^1.0.12",
-    "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.1",
-    "gulp-rename": "2.0.0",
-    "gulp-svgmin": "^4.1.0",
-    "gulp-svgstore": "8.0.0",
-    "gulp-terser": "2.1.0",
-    "postcss": "8.3.11",
-    "postcss-csso": "5.0.1",
-    "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
-  },
-  "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
-    "start": "gulp"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all",
-    "not < 0.25%"
-  ],
-  "editorconfig-cli": [
-    "*.json",
-    "*.js",
-    "source/*.html",
-    "source/js/**/*.js",
-    "source/img/**/*.svg",
-    "source/less/**/*.less"
-  ],
-  "engines": {
-    "node": "^16"
-  },
-  "type": "module"
+
+import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import less from 'gulp-less';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import del from 'del';
+import browser from 'browser-sync';
+import htmlmin from 'gulp-htmlmin';
+
+// Styles
+
+export const styles = () => {
+  return gulp.src('source/less/style.less', { sourcemaps: true })
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(browser.stream());
 }
+
+// HTML
+
+export const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+}
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
+}
+
+// Images
+
+const optimizeImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'))
+}
+
+const copyImages = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(gulp.dest('build/img'))
+}
+
+// WebP
+
+const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
+// SVG
+
+const svg = () =>
+  gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+
+const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
+}
+
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/*.ico',
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+  done();
+}
+
+// Clean
+
+const clean = () => {
+  return del('build');
+};
+
+// Server
+
+const server = (done) => {
+  browser.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+// Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/*.html', gulp.series(html, reload));
+}
+
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+);
+
+// Default
+
+export default gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
+
+

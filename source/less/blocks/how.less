@@ -1,6 +1,17 @@
 .how {
   margin: 0;
-  padding: 0 20px 29px;
+  padding: 1px 20px 30px 20px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 0 20px 102px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 54px 0px 71px;
+    width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .how__title {
@@ -10,7 +21,7 @@
   font-weight: 400;
   line-height: 40px;
   width: 230px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 
   @media (min-width: @tablet) {
     font-size: 60px;
@@ -19,6 +30,11 @@
     width: 375px;
     padding: 17px 0 0px 13px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 17px 0 0 0;
+    width: 600px;
+  }
 }
 
 .how__list {
@@ -26,13 +42,21 @@
   padding: 0;
 
   @media (min-width: @tablet) {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: grid;
     grid-template-columns: 280px 280px;
-    gap: 103px;
-  }
+    gap: 104px 101px;
+    width: 734px;
+}
 
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 82px;
+    margin: 0;
+    width: 1440px;
+  }
 }
 
 .how__item {
@@ -42,18 +66,59 @@
   margin-bottom: 20px;
   background-repeat: no-repeat;
   min-height: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background: center #68b738 no-repeat;
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    color: #f2f2f2;
+    font-size: 280px;
+    bottom: -125px;
+    left: 116px;
+    z-index: -1;
+
+    @media (min-width: @desktop) {
+      bottom: -76px;
+      left: 118px;
+    }
+  }
 
   @media (min-width: @tablet) {
     min-height: 80px;
     margin: 31px 0 0 13px;
   }
+
+  @media (min-width: @desktop) {
+    margin: 35px 0 0;
+    bottom: 2px;
+    left: 0px;
+  }
 }
 
 .how__item--leaf {
-  background-image: url("../img/leaf.svg");
+
+  &::before {
+    background-image: url("../img/leaf.svg");
+
+    @media (min-width: @tablet) {}
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/leaf-tablet.svg");
+    &::after {
+      content: "1";
+    }
   }
 }
 
@@ -74,14 +139,26 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    position: relative;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 111px 0 52px;
+    margin: 0 0 0 1px;
+    min-height: 72px;
   }
 }
 
 .how__item--powder {
-  background-image: url("../img/powder.svg");
+
+  &::before {
+    background-image: url("../img/powder.svg");
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/powder-tablet.svg");
+    &::after {
+      content: "2";
+    }
   }
 }
 
@@ -98,15 +175,29 @@
 }
 
 .how__item--eat {
-  background-image: url("../img/knife.svg");
+
+  &::before {
+    background-image: url("../img/knife.svg");
+  }
 
   @media (min-width: @tablet) {
-    background-image: url("../img/knife-tablet.svg");
+    &::after {
+      content: "3";
+    }
   }
 }
 
 .how__item--time {
-  background-image: url("../img/watch-tablet.svg");
+
+  &::before {
+    background-image: url("../img/watch.svg");
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      content: "4";
+    }
+  }
 }
 
 .how__list-item {
