@@ -1,16 +1,31 @@
 .page-form__title {
-  margin-bottom: 37px;
-  padding-top: 28px;
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 60px;
+	margin-bottom: 37px;
+	padding-top: 28px;
 
-  @media(min-width:@tablet) {
-    margin-bottom: 55px;
-    padding-top: 55px;
-  }
+	@media(min-width:@tablet) {
+		margin-bottom: 54px;
+		padding-top: 52px;
+	}
+
+	@media(min-width:@desktop) {
+		width: 1220px;
+		padding: 64px 0 0 0;
+		margin: 0 auto;
+	}
 }
 
 .page-form__text {
-  margin-bottom: 40px;
+	margin-bottom: 39px;
+	width: 240px;
+
+	@media (min-width: @tablet) {
+		width: 350px;
+		margin-bottom: 66px;
+	}
+
+	@media(min-width:@desktop) {
+		padding: 56px 0 0px 78px;
+		max-resolution: 0;
+		width: 390px;
+	}
 }
