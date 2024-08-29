@@ -3,6 +3,13 @@
     padding: 0 0 7px 0;
     position: relative;
 
+    @media (min-width: @tablet) {
+        padding-bottom: 53px;
+
+        @media (min-width: @desktop) {
+            padding-bottom: 51px;
+        }
+    }
 
     &::after {
         content: "";
@@ -11,6 +18,10 @@
         width: 100%;
         top: -71px;
         left: 0;
+
+        @media (min-width: @tablet) {
+            border-top: #ffffff;
+        }
     }
 }
 
@@ -30,6 +41,25 @@
 
 .contact-group__list {
     margin: 0 20px;
+
+    @media (min-width: @tablet) {
+        margin: 0 75px 0 71px;
+        padding-top: 41px;
+
+        @media (min-width: @desktop) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 82px;
+            margin: 0 0 0 42px
+        }
+    }
+}
+
+.contact-group__container {
+    @media (min-width: @desktop) {
+        margin: 0 auto;
+        width: 1300px;
+    }
 }
 
 .contact-group__item {
