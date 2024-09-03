@@ -49,18 +49,29 @@
 }
 
 .text-input__input:hover {
-  border: 1px solid #cdcdcd;
+  outline: 1px solid #cdcdcd;
 }
 
 .text-input__input:focus {
-  outline: none;
-  border: 2px solid #444444;
+  outline: 2px solid #444444;
 }
 
 .text-input__input:invalid:not(:placeholder-shown) {
-border: 2px solid #ff8282;
+  outline: 2px solid #ff8282;
 }
 
-.text-input__input:invalid:not(:placeholder-shown) + .contacts-group__icon {
+.text-input__input:invalid:not(:placeholder-shown)+.contacts-group__icon {
   stroke: #ff8282;
+}
+
+.text-input__input:hover+.contact-group__img {
+  color: #222222;
+}
+
+.text-input__input:focus+.contact-group__img {
+  color: #68b738;
+}
+
+.text-input__input:invalid+.contact-group__img {
+  color: #ff8282;
 }
