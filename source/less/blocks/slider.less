@@ -17,7 +17,7 @@
   width: 280px;
   height: 256px;
   position: absolute;
-  top: 0;
+  top: 18px;
   left: 21px;
 
   @media (min-width: @tablet) {
@@ -32,7 +32,7 @@
     position: relative;
     top: 0;
     right: 0;
-   }
+  }
 }
 
 .slider__screen {
@@ -52,24 +52,22 @@
     &::before {
       content: "";
       width: 100%;
-      height: 150px;
+      height: 152px;
       position: absolute;
       top: 0;
       left: 0;
       background-color: #ffffff;
       z-index: 1;
 
-      
-    @media (min-width: @desktop) {
-      height: 137px;
-  }
+      @media (min-width: @desktop) {
+        height: 137px;
+      }
     }
   }
 
   @media (min-width: @desktop) {
     background-color: #f2f2f2;
-    
-   }
+  }
 }
 
 .slider__screen--before {
@@ -118,12 +116,16 @@
       height: 511px;
       top: -237px;
       left: 16px;
-  }
+    }
 
     @media (min-width: @desktop) {
       height: 508px;
       top: -236px;
+    }
   }
+
+  &::before:hover {
+    color: #68b738;
   }
 
   &::after {
@@ -136,7 +138,6 @@
     left: 15px;
     border: none;
   }
-
 }
 
 .slider--before .slider__handle {
@@ -145,4 +146,8 @@
 
 .slider--after .slider__handle {
   left: 0;
+}
+
+.slider-img {
+  stroke: #68b738;
 }

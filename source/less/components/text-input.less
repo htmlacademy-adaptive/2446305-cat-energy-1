@@ -4,8 +4,8 @@
   position: relative;
 
   @media (min-width: @tablet) {
-  gap: 13px;
-}
+    gap: 13px;
+  }
 }
 
 .text-input__label {
@@ -21,7 +21,7 @@
     font-size: 20px;
     line-height: 22px;
     padding-top: 15px;
-}
+  }
 }
 
 .text-input__input {
@@ -39,10 +39,28 @@
     font-size: 20px;
     line-height: 22px;
     height: 50px;
-    padding: 0 19px;
+    padding: 0 41px 0 21px;
   }
 
-    @media (min-width: @desktop) {
-        width: 401px;
-    }
+  @media (min-width: @desktop) {
+    width: 399px;
+    margin-bottom: 20px;
   }
+}
+
+.text-input__input:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.text-input__input:focus {
+  outline: none;
+  border: 2px solid #444444;
+}
+
+.text-input__input:invalid:not(:placeholder-shown) {
+border: 2px solid #ff8282;
+}
+
+.text-input__input:invalid:not(:placeholder-shown) + .contacts-group__icon {
+  stroke: #ff8282;
+}
