@@ -12,6 +12,8 @@
   <link rel="icon" sizes="16x16" href="./img/favicons/16.png" type="image/x-icon">
   <link rel="icon" sizes="32x32" href="./img/favicons/32.png" type="image/x-icon">
   <link rel="icon" sizes="152x152" href="./img/favicons/152.png" type="image/x-icon">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="body index">
@@ -21,7 +23,7 @@
         <picture>
           <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)" width="202" height="59">
           <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" width="174" height="50">
-          <img class="logo__img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
+          <img class="logo-img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
         </picture>
       </a>
       <nav class="main-nav">
@@ -30,7 +32,7 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item main-nav__item-current">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
@@ -100,8 +102,8 @@
     </section>
     <section class="example">
       <div class="example__block">
-        <div class="example__title--block">
-          <div class="example__title--container">
+        <div class="example__title-block">
+          <div class="example__title-container">
             <h2 class="example__title">Живой пример</h2>
           </div>
         </div>
@@ -124,7 +126,7 @@
             </div>
             <div class="example__container-cost">
               <p class="example__cost">Затраты на питание:</p>
-              <p class="example__cost"> 15 000 РУБ.</p>
+              <p class="example__price"> 15 000 РУБ.</p>
             </div>
           </div>
           <div class="example__slider slider">
@@ -211,7 +213,7 @@
         <div class="footer__logo-academy logo-academy">
           <a class="logo-academy__link" href="#" aria-label="Логотитп академии">
             <span class="logo-academy__text">HTML Academy</span>
-            <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="logo-academy__image" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <use href="./img/sprite.svg#academy"></use>
             </svg>
           </a>

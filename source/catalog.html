@@ -12,7 +12,8 @@
   <link rel="icon" sizes="16x16" href="./img/favicons/16.png" type="image/x-icon">
   <link rel="icon" sizes="32x32" href="./img/favicons/32.png" type="image/x-icon">
   <link rel="icon" sizes="152x152" href="./img/favicons/152.png" type="image/x-icon">
-
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="body">
@@ -22,7 +23,7 @@
         <picture>
           <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)" width="202" height="59">
           <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" width="174" height="50">
-          <img class="logo__img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
+          <img class="logo-img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
         </picture>
       </a>
       <nav class="main-nav">
@@ -35,7 +36,7 @@
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__item--current" href="#">Каталог продукции</a>
+              <a class="main-nav__link main-nav__item-current" href="#">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -48,7 +49,7 @@
 
   <main class="page-catalog">
     <h1 class="page-catalog__title inner-title">Каталог продукции</h1>
-    <section class="calalog">
+    <section class="catalog">
       <ul class="catalog__list">
         <li class="catalog__item card-inner">
           <picture>
@@ -65,7 +66,7 @@
               width="140" height="107" alt="Банка с курицей 500г">
           </picture>
           <div class="catalog__container">
-            <a href="" class="catalog__link">
+            <a href="chicken-small.html" class="catalog__link">
               <h2 class="catalog__title card-inner__title">Cat Energy PRO 500 г</h2>
             </a>
             <div class="catalog__wrapper card-inner__wrapper">

@@ -12,6 +12,8 @@
   <link rel="icon" sizes="16x16" href="./img/favicons/16.png" type="image/x-icon">
   <link rel="icon" sizes="32x32" href="./img/favicons/32.png" type="image/x-icon">
   <link rel="icon" sizes="152x152" href="./img/favicons/152.png" type="image/x-icon">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="body">
@@ -21,7 +23,7 @@
         <picture>
           <source srcset="./img/logo-desktop.svg" media="(min-width: 1440px)" width="202" height="59">
           <source srcset="./img/logo-tablet.svg" media="(min-width: 768px)" width="174" height="50">
-          <img class="logo__img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
+          <img class="logo-img" src="./img/logo-mobile.svg" alt="Логотип сайта" width="33" height="38">
         </picture>
       </a>
       <nav class="main-nav">
@@ -36,7 +38,7 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item main-nav__item-current">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
@@ -47,22 +49,22 @@
   <main class="main page-form">
     <h1 class="inner-title page-form__title">Подбор программы</h1>
     <p class="inner-text page-form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-    <form action="press" class="form">
+    <form action="https://echo.htmlacademy.ru/" class="form" method="post">
       <div class="form__wrapper">
         <fieldset class="form__group name-group">
           <legend class="form__title visually-hidden">Описание пациента</legend>
           <ul class="form__list name-group__list">
             <li class="name-group__item text-input">
               <label for="name" class="text-input__label">ИМЯ:*</label>
-              <input type="text" id="name" class="text-input__input" value="барсик">
+              <input type="text" name="name" id="name" class="text-input__input" value="барсик">
             </li>
             <li class="name-group__item text-input">
               <label for="weight" class="text-input__label">Вес (кг):*</label>
-              <input type="text" id="weight" class="text-input__input" value="7">
+              <input type="text" name="weight" id="weight" class="text-input__input" value="7">
             </li>
             <li class="name-group__item text-input">
               <label for="age" class="text-input__label">Возраст(лет):</label>
-              <input type="text" id="age" class="text-input__input" value="7">
+              <input type="text" name="age" id="age" class="text-input__input" value="7">
             </li>
           </ul>
         </fieldset>
@@ -88,7 +90,7 @@
       <fieldset class="form__group contact-group">
         <legend class="form__title special-title">
           <span class="special-title__container">
-            <span class="form__title--comment special-title__text">Контактные данные (владельца кота)
+            <span class="form__title-comment special-title__text">Контактные данные (владельца кота)
             </span>
           </span>
 
@@ -97,8 +99,8 @@
           <ul class="form__list contact-group__list">
             <li class="contact-group__item text-input">
               <label for="email" class="text-input__label">E-mail:*</label>
-              <input type="text" id="email" class="text-input__input text-input__input--email" name="email"
-                value="kuklachev@gmail.com">
+              <input type="email" id="email" class="text-input__input text-input__input--email" name="email"
+                value="kuklachev@gmail.com" required>
               <svg class="contact-group__img" width="20" height="20" viewBox="0 0 20 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite.svg#mail"></use>
@@ -106,7 +108,7 @@
             </li>
             <li class="contact-group__item text-input">
               <label for="phone" class="text-input__label">Телефон:*</label>
-              <input type="text" id="phone" class="text-input__input" value="8 (960) 900-60-90">
+              <input type="text" name="phone" id="phone" class="text-input__input" value="8 (960) 900-60-90" required>
               <svg class="contact-group__img" width="16" height="16" viewBox="0 0 16 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <use href="./img/sprite.svg#phone-arrow"></use>
@@ -136,20 +138,20 @@
         </legend>
         <ul class="form__list addition-group__list">
           <li class="addition-group__item checkbox-input">
-            <input type="checkbox" id="sweetener" class="checkbox-input__input visually-hidden" name="сахарозаменитель"
+            <input type="checkbox" id="sweetener" class="checkbox-input__input visually-hidden" name="ingredients" value="sweetener"
               checked="checked">
             <label for="sweetener" class="checkbox-input__label">сахарозаменитель</label>
           </li>
           <li class="addition-group__item checkbox-input">
-            <input type="checkbox" id="water" class="checkbox-input__input visually-hidden" name="питьевая вода">
+            <input type="checkbox" id="water" class="checkbox-input__input visually-hidden" name="ingredients" value="water">
             <label for="water" class="checkbox-input__label">питьевая вода</label>
           </li>
           <li class="addition-group__item checkbox-input">
-            <input type="checkbox" id="milk" class="checkbox-input__input visually-hidden" name="молоко">
+            <input type="checkbox" id="milk" class="checkbox-input__input visually-hidden" name="ingredients" value="milk">
             <label for="milk" class="checkbox-input__label">молоко</label>
           </li>
           <li class="addition-group__item checkbox-input">
-            <input type="checkbox" id="vitamins" class="checkbox-input__input visually-hidden" name="витамины">
+            <input type="checkbox" id="vitamins" class="checkbox-input__input visually-hidden" name="ingredients" value="vitamins">
             <label for="vitamins" class="checkbox-input__label">витамины</label>
           </li>
         </ul>
@@ -222,12 +224,11 @@
         </div>
         <div class="footer__logo-academy logo-academy">
           <a class="logo-academy__link" href="#" aria-label="Логотитп академии"><span class="logo-academy__text">HTML
-              Academy</span> <svg width="27" height="34" viewBox="0 0 27 34" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
-                fill="#666666" />
-            </svg></a>
+              Academy</span>
+              <svg class="logo-academy__image" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use href="./img/sprite.svg#academy"></use>
+              </svg>
+            </a>
         </div>
       </div>
     </section>
@@ -235,4 +236,5 @@
   <script src="./js/script.js">
   </script>
 </body>
+
 </html>

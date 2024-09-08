@@ -1,77 +1,77 @@
 .result {
-    padding: 20px 19px 0;
-    margin: 0 auto;
+  padding: 20px 19px 0;
+  margin: 0 auto;
 
-    @media (min-width: @tablet) {
-        padding: 0;
-        margin: 0 auto 84px;
-        display: flex;
-        justify-content: space-between;
-    }
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0 auto 84px;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    @media (min-width: @desktop) {
-        display: block;
-        margin-bottom: 44px;
-    }
+  @media (min-width: @desktop) {
+    display: block;
+    margin-bottom: 44px;
+  }
 }
 
 .result__list {
+  padding: 0;
+  margin: 0;
+  width: 125px;
+  min-height: 70px;
+  text-align: center;
+
+  @media (min-width: @tablet) {
     padding: 0;
     margin: 0;
-    width: 125px;
-    min-height: 70px;
-    text-align: center;
-
-    @media (min-width: @tablet) {
-        padding: 0;
-        margin: 0;
-        width: 162px;
-    }
+    width: 162px;
+  }
 }
 
 .result__term {
-    padding: 15px 16px 16px;
-    margin: 0;
-    font-size: 24px;
-    line-height: 24px;
+  padding: 15px 16px 16px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet) {
+    font-size: 30px;
     font-weight: 400;
-    text-transform: uppercase;
-    border: 1px solid #cdcdcd;
-    border-radius: 4px;
-    box-sizing: border-box;
+    line-height: 37px;
+    padding: 16px 16px 20px;
+  }
 
-    @media (min-width: @tablet) {
-        font-size: 30px;
-        font-weight: 400;
-        line-height: 37px;
-        padding: 16px 16px 20px;
-    }
-
-    @media (min-width: @desktop) {
-        padding: 13px 16px 20px;
-    }
+  @media (min-width: @desktop) {
+    padding: 13px 16px 20px;
+  }
 }
 
 .result__description {
-    padding: 0;
-    margin: -10px auto 0;
-    font-family: "Lato", Arial, Sans-serif;
-    font-size: 12px;
-    line-height: 100%;
+  padding: 0;
+  margin: -10px auto 0;
+  font-family: @lato;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 400;
+  width: 77px;
+  color: #444444;
+  background-color: #eaeaea;
+
+  @media (min-width: @tablet) {
+    font-size: 14px;
     font-weight: 400;
-    width: 77px;
-    color: #444444;
-    background-color: #eaeaea;
+    line-height: 14px;
+    background-color: #ffffff;
+    width: 135px;
+  }
 
-    @media (min-width: @tablet) {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 14px;
-        background-color: #ffffff;
-        width: 135px;
-    }
-
-    @media (min-width: @desktop) {
-        background-color: #f2f2f2;
-    }
+  @media (min-width: @desktop) {
+    background-color: #f2f2f2;
+  }
 }
