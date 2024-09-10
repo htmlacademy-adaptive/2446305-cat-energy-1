@@ -1,0 +1,130 @@
+.products {
+  padding: 0 20px 24px;
+  border-bottom: 1px solid #ebebeb;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("../img/plus-mobile.svg") no-repeat 0 0;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: @tablet) {
+    padding: 277px 35px 24px;
+    width: 324px;
+    box-sizing: border-box;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background: url("../img/plus-tablet.svg") no-repeat 0 0;
+      top: 165px;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: calc(100% - 116px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: 1px solid #ebebeb;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 0;
+    width: 245px;
+    padding-top: 264px;
+
+    &::before {
+      left: 123px;
+      top: 165px;
+    }
+
+    &::after {
+      left: 0;
+      top: 110px;
+    }
+  }
+}
+
+.products__title {
+  margin: 0;
+  padding: 77px 39px 11px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 53px 21px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0 5px 27px;
+  }
+}
+
+.products__text {
+  margin: 0;
+  padding: 0 30px;
+  font-family: @lato;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #444444;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 90px;
+    padding: 0;
+  }
+}
+
+.products__button {
+  font-family: @oswald;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  color: #444444;
+  background-color: #f2f2f2;
+  width: auto;
+}
+
+.products__button:hover {
+  background-color: #ebebeb;
+}
+
+.products__button:active {
+  background-color: #ebebeb;
+}
+
+.products__button:focus {
+  outline: none;
+  background-color: #ebebeb;
+}

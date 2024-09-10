@@ -5,6 +5,23 @@
 
   @media (min-width: @tablet) {
     border-top: none;
+    padding-top: 40px;
+  }
+}
+
+.catalog__container {
+  padding-left: 160px;
+  margin: 0 auto;
+  width: 160px;
+
+  @media (min-width: @tablet) {
+    padding: 276px 38px 32px;
+    margin: 0;
+    width: 247px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 266px 39px 4px;
   }
 }
 
@@ -18,13 +35,63 @@
     flex-wrap: wrap;
     margin: 0 auto;
     width: 708px;
-    gap: 15px 60px;
+    gap: 27px 60px;
     margin-bottom: 33px;
 
     @media (min-width: @desktop) {
       width: 1220px;
-      gap: 18px 80px;
+      gap: 29px 80px;
       margin-bottom: 41px;
+    }
+  }
+}
+
+.catalog__link {
+  text-decoration: none;
+}
+
+.catalog__wrapper {
+  width: 140px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    position: relative;
+    z-index: 5;
+    width: 250px;
+    margin: 0;
+    display: block;
+    padding: 0;
+
+    @media (min-width: @desktop) {
+      width: 170px;
+      margin-bottom: 30px;
+      padding-top: 1px;
+    }
+  }
+}
+
+.catalog__border {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 140px;
+  justify-content: space-between;
+
+
+  @media (min-width: @tablet) {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #cdcdcd;
+    width: 247px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 7px;
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: @desktop) {
+      padding-bottom: 5px;
     }
   }
 }
@@ -34,21 +101,22 @@
   margin: 0;
   padding-top: 21px;
   border-bottom: 1px solid #eaeaea;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet) {
     border-bottom: none;
     width: 324px;
     min-height: 511px;
     position: relative;
+    padding: 0 0 33px;
 
     &::before {
       content: "";
       width: 324px;
-      height: 430px;
+      height: calc(100% - 114px);
       background-color: #f2f2f2;
       position: absolute;
-      bottom: 12px;
+      bottom: 0;
       left: 0;
       z-index: 0;
 
@@ -85,4 +153,3 @@
     }
   }
 }
-

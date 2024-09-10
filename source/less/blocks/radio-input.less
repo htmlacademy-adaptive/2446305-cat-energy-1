@@ -18,7 +18,7 @@
     font-size: 20px;
     line-height: 22px;
     padding-left: 45px;
-}
+  }
 
   &::before {
     content: "";
@@ -39,9 +39,8 @@
       border-radius: 25px;
       left: -15px;
       top: -6px;
+    }
   }
-}
-  
 
   &::after {
     content: "";
@@ -60,10 +59,18 @@
       border-radius: 25px;
       left: -4px;
       top: 5px;
-  }
+    }
   }
 }
 
 .radio-input__input:checked + .radio-input__label::after {
   display: block;
+}
+
+.radio-input__input:hover + .radio-input__label::before {
+  border: 1px solid #bababa;
+}
+
+.radio-input__input:disabled + .radio-input__label {
+  opacity: 0.3;
 }

@@ -1,7 +1,7 @@
 {
   "name": "cat-energy-1",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Р›РёС‡РЅС‹Р№ РїСЂРѕРµРєС‚ В«РљСЌС‚ СЌРЅРµСЂРґР¶РёВ» РѕС‚В HTMLВ Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",

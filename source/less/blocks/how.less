@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding: 54px 0px 71px;
+    padding: 54px 0 71px;
     width: 1220px;
     margin: 0 auto;
   }
@@ -28,7 +28,7 @@
     font-weight: 400;
     line-height: 60px;
     width: 375px;
-    padding: 17px 0 0px 13px;
+    padding: 17px 0 0 13px;
   }
 
   @media (min-width: @desktop) {
@@ -48,7 +48,7 @@
     grid-template-columns: 280px 280px;
     gap: 104px 101px;
     width: 734px;
-}
+  }
 
   @media (min-width: @desktop) {
     display: flex;
@@ -103,16 +103,13 @@
   @media (min-width: @desktop) {
     margin: 35px 0 0;
     bottom: 2px;
-    left: 0px;
+    left: 0;
   }
 }
 
 .how__item--leaf {
-
   &::before {
     background-image: url("../img/leaf.svg");
-
-    @media (min-width: @tablet) {}
   }
 
   @media (min-width: @tablet) {
@@ -150,7 +147,6 @@
 }
 
 .how__item--powder {
-
   &::before {
     background-image: url("../img/powder.svg");
   }
@@ -166,7 +162,7 @@
   margin: 0;
   padding: 2px 0 4px;
   color: #444444;
-  font-family: "Lato";
+  font-family: @lato;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -175,7 +171,6 @@
 }
 
 .how__item--eat {
-
   &::before {
     background-image: url("../img/knife.svg");
   }
@@ -188,7 +183,6 @@
 }
 
 .how__item--time {
-
   &::before {
     background-image: url("../img/watch.svg");
   }
