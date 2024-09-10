@@ -5,6 +5,7 @@
 
   @media (min-width: @tablet) {
     border-top: none;
+    padding-top: 40px;
   }
 }
 
@@ -14,16 +15,15 @@
   width: 160px;
 
   @media (min-width: @tablet) {
-    padding: 295px 38px 32px;
+    padding: 276px 38px 32px;
     margin: 0;
     width: 247px;
   }
 
   @media (min-width: @desktop) {
-    padding: 284px 39px 4px;
+    padding: 266px 39px 4px;
   }
 }
-
 
 .catalog__list {
   padding: 0;
@@ -35,12 +35,12 @@
     flex-wrap: wrap;
     margin: 0 auto;
     width: 708px;
-    gap: 15px 60px;
+    gap: 27px 60px;
     margin-bottom: 33px;
 
     @media (min-width: @desktop) {
       width: 1220px;
-      gap: 18px 80px;
+      gap: 29px 80px;
       margin-bottom: 41px;
     }
   }
@@ -108,15 +108,15 @@
     width: 324px;
     min-height: 511px;
     position: relative;
-    padding: 21px 0 11px;
+    padding: 0 0 33px;
 
     &::before {
       content: "";
       width: 324px;
-      height: 430px;
+      height: calc(100% - 114px);
       background-color: #f2f2f2;
       position: absolute;
-      bottom: -30px;
+      bottom: 0;
       left: 0;
       z-index: 0;
 
