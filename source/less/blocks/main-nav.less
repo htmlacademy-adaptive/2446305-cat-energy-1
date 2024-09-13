@@ -8,7 +8,6 @@
   top: -45px;
   width: 24px;
   height: 24px;
-  // display: block;
   background-image: url("../img/menu.svg");
   background-repeat: no-repeat;
   background-color: #ffffff;
@@ -48,7 +47,6 @@
   padding: 0;
   list-style: none;
   border-top: 1px solid #e6e6e6;
-  /*display: none;/*/
 
   @media (min-width: @tablet) {
     display: flex;
@@ -124,7 +122,7 @@
   opacity: 0.6;
 }
 
-.index .main-nav__link {
+.main-nav--index .main-nav__link {
   @media (min-width: @desktop) {
     color: #ffffff;
   }
@@ -141,7 +139,7 @@
   }
 }
 
-.main-nav__item-current {
+.main-nav__item--current {
   @media (min-width: @tablet) {
     position: relative;
 
@@ -169,8 +167,13 @@
   }
 }
 
-.index .main-nav__item--current::after {
+.main-nav--index .main-nav__item--current::after {
   @media (min-width: @desktop) {
     border-top: 2px solid #ffffff;
   }
+}
+
+.main-nav--closed:focus {
+  outline: none;
+  opacity: 0.3;
 }
